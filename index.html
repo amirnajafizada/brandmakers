@@ -12,10 +12,23 @@
 <body>
 
     <style>
-       
+        .dropdown-menu {
+    background-color: #0E0E0A !important; 
+  }
+
+  .dropdown-menu .dropdown-item {
+    color: #fff !important; 
+  }
+
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus,
+  .dropdown-menu .dropdown-item.active {
+    background-color: transparent;
+    color: #D7A648 !important;
+  }
          
     </style>
-<!-- Bootstrap 5 Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home" style="color: #D7A648;">Brand Makers</a>
@@ -27,11 +40,17 @@
           <li class="nav-item">
             <a class="nav-link active" style="color: #D7A648;" href="#home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pricing">Packages</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </a>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item" href="#pricing">English</a></li>
+              <li><a class="dropdown-item" href="#farsi">Farsi</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#hanging-icons">Features</a>
+            <a class="nav-link" href="#features">Features</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -146,11 +165,101 @@
                 </table>
             </div>
         </div>
+
+        <div class="container farsi" style="direction: ltr;" id="farsi">
+          <h1>تعرفه‌ تبلیغات</h1>
+          <hr class="divider" />
+      
+          <!-- Post Design -->
+          <div class="table-section">
+              <h2>تعرفه طراحی پست و محتوا</h2>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>خدمات طراحی</th>
+                          <th>قیمت (افغانی)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>طراحی پست معمولی (عکس + متن)</td>
+                          <td>100</td>
+                      </tr>
+                      <tr>
+                          <td>طراحی تبلیغاتی ویژه</td>
+                          <td>150</td>
+                      </tr>
+                      <tr>
+                          <td>طراحی بنر تبلیغاتی برای استوری‌های پولی</td>
+                          <td>70</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      
+          <hr class="divider" />
+      
+          <!-- Advertising Publication -->
+          <div class="table-section">
+              <h2>تعرفه نشر تبلیغات در پیج</h2>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>نوع تبلیغ</th>
+                          <th>مدت زمان</th>
+                          <th>قیمت (افغانی)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>استوری تبلیغاتی</td>
+                          <td>۲۴ ساعت</td>
+                          <td>150</td>
+                      </tr>
+                      <tr>
+                          <td>پست تبلیغاتی در پیج (۱ پست + ۲ استوری)</td>
+                          <td>-</td>
+                          <td>350</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      
+          <hr class="divider" />
+      
+          <!-- Page Management -->
+          <div class="table-section">
+              <h2>تعرفه مدیریت پیج (ماهانه)</h2>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>خدمات</th>
+                          <th>قیمت (افغانی)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>مدیریت پیج همراه با ۱۲ پست و ۲۰ استوری</td>
+                          <td>2500</td>
+                      </tr>
+                      <tr>
+                          <td>پاسخ‌دهی به کامنت‌ها و پیام‌های دایرکت</td>
+                          <td>500</td>
+                      </tr>
+                      <tr>
+                          <td>گزارش‌دهی و تحلیل ماهانه</td>
+                          <td>700</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      
     </section>
 
 
 
-    <div class="container px-4 py-5" id="hanging-icons">
+    <div class="container px-4 py-5" id="features">
         <h1>Our Features</h1>
         <hr class="divider">
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -185,6 +294,8 @@
         </div>
       </div>
 
+      <hr class="divider">
+
       <header id="contact">
         <h1>Contact Us - Brand Makers</h1>
     </header>
@@ -195,19 +306,19 @@
 
         <div class="contact-info">
             <h2 style="color:#D7A648 ;">Our Office</h2>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Karte Char, Kabul, Afghanistan</p>
-            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7890</p>
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> brandmakers@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt" style="color: #D7A648;"></i> <strong>Address:</strong> Karte Char, Kabul, Afghanistan</p>
+            <p><i class="fas fa-phone" style="color: #D7A648;"></i> <strong>Phone:</strong> +123 456 7890</p>
+            <p><i class="fas fa-envelope" style="color: #D7A648;"></i> <strong>Email:</strong> brandmakers.25@gmail.com</p>
         </div>
 
         <div class="divider"></div>
 
-        <h2>Follow Us</h2>
+        <h2 style="color: #D7A648;">Follow Us</h2>
         <p>Stay connected with us on our social media channels:</p>
         <p>
             <a href="#" style="color: #D7A648; text-decoration: none; margin-right: 10px;"><i class="fab fa-facebook-square"></i> Facebook</a>
             <a href="#" style="color: #D7A648; text-decoration: none; margin-right: 10px;"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="#" style="color: #D7A648; text-decoration: none; margin-right: 10px;"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.instagram.com/brandmakers.25/" target="_blank" style="color: #D7A648; text-decoration: none; margin-right: 10px;"><i class="fab fa-instagram"></i> Instagram</a>
         </p>
     </div>
 
